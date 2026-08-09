@@ -1,312 +1,190 @@
-/*src/index.css */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 :root {
-    --primary: #ab2e2e;
-    --accent: #090602;
-    --text: #ab2e2e;
-    --light: #F4F6F8;
-    --white: #FFFFFF;
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary: #b52f2f;
+  --primary-dark: #8f2020;
 
-}
-/* === SECTION STYLES === */
-section{
-    padding: 60px 0;
-}
-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    color: var(--primary);
-}
+  --black: #0a0a0a;
+  --black-soft: #151515;
 
-section h2::after{
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent);
-    margin: 12px auto 0;
-    border-radius: 2px;
-}
-/* 3. Dark Mode Global Overrides */
-body[data-theme="dark"] {
-    background: #121212;
-    color: #f5f5f5;
-}
-/* Header */
-body[data-theme="dark"] .site-header,
-body[data-theme="dark"] .navbar {
-    background: #1a1a1a;
+  --white: #ffffff;
+  --off-white: #fafafa;
+
+  --text: #111111;
+  --text-light: #555555;
+  --muted: #777777;
+
+  --border: #e5e5e5;
+
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-/* Navigation Links */
-body[data-theme="dark"] .nav-links a {
-    color: #ffffff;
+/* =========================================
+   HTML / BODY
+========================================= */
+
+html,
+body,
+#root {
+  min-height: 100%;
+  height: 100%;
 }
 
-
-body[data-theme="dark"] .nav-links a:hover,
-body[data-theme="dark"] .nav-links a.active {
-    color: #090601;
-}
-
-
-/* Logo */
-body[data-theme="dark"] .logo {
-    color: #ffffff;
-}
-
-
-/* Hero */
-body[data-theme="dark"] .hero-section {
-    background: linear-gradient(135deg, #111827, #1f2937);
-}
-
-
-/* Highlight */
-body[data-theme="dark"] .highlight {
-    color: #120d04;
-}
-
-
-/* About */
-body[data-theme="dark"] .about-section {
-    background: #121212;
-    color: #f5f5f5;
-}
-
-
-/* Skills */
-body[data-theme="dark"] .skills-section {
-    background: #181818;
-}
-
-
-body[data-theme="dark"] .skill-item {
-    background: #242424;
-    color: #ffffff;
-    border-color: #16130f;
-}
-
-/* GitHub Stats Dark */
-body[data-theme="dark"] .github-stats {
-    background: #371f21;
-    color: #ffffff;
-    border: 1px solid #374151;
-}
-
-/* Skill Cards Dark */
-body[data-theme="dark"] .skill-card {
-    background: #1f2937;
-    border: 1px solid #374151;
-    color: #ffffff;
-}
-body[data-theme="dark"] .skill-name { color: #ffffff; }
-body[data-theme="dark"] .skill-level { color: #0f0a04; }
-
-/* Projects */
-body[data-theme="dark"] .projects-section {
-    background: #121212;
-}
-
-
-body[data-theme="dark"] .project-card {
-    color: #c5303a;
-    background: #242424;
-    color: #ffffff;
-    box-shadow: 0 5px 20px rgba(255,255,255,0.08);
-}
-
-
-body[data-theme="dark"] .project-card h3,
-body[data-theme="dark"] .project-card p {
-    color: #ffffff;
-}
-
-
-/* Tags */
-body[data-theme="dark"] .tag {
-    background: #0e0c08;
-    color: #ffffff;
-}
-
-
-/* Contact */
-body[data-theme="dark"] .contact-section {
-    background: #181818;
-}
-
-
-/* Form */
-body[data-theme="dark"] input,
-body[data-theme="dark"] textarea {
-    background: #2b2b2b;
-    color: #ffffff;
-    border: 1px solid #555;
-}
-
-
-body[data-theme="dark"] input::placeholder,
-body[data-theme="dark"] textarea::placeholder {
-    color: #bdbdbd;
-}
-
-
-body[data-theme="dark"] label {
-    color: #ffffff;
-}
-
-
-/* Buttons */
-body[data-theme="dark"] .btn-primary {
-    background: #0b0b0a;
-    color: #ffffff;
-}
-
-
-body[data-theme="dark"] .btn-secondary {
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-
-body[data-theme="dark"] .btn-secondary:hover {
-    background: #ffffff;
-    color: #121212;
-}
-
-
-/* Footer */
-body[data-theme="dark"] .site-footer {
-    background: #1a1a1a;
-    color: #cccccc;
-}
-
-
-body[data-theme="dark"] .site-footer a {
-    color: #ffffff;
-}
-
-
-body[data-theme="dark"] .site-footer a:hover {
-    color: #14100a;
-}
-
-
-/* Theme Button */
-body[data-theme="dark"] .theme-toggle {
-    color: #c5303a;
-    background: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
-}
-html, body, #root {
-    min-height: 100%;
-    height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text);
-    line-height: 1.6;
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+p {
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   APP LAYOUT
+========================================= */
+
 .app-shell {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .page-content {
-    flex: 1;
+  flex: 1;
 }
 
 .container {
-    width: min(1200px, 100% - 40px);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: min(1200px, 100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+
+/* =========================================
+   SECTIONS
+========================================= */
 
 section {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
-/* BUTTON */
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--black);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
 
 .btn {
-display: inline-block;
-padding: 12px 28px;
-border-radius: 8px;
-text-decoration: none;
-font-weight: 600;
-font-size: 1rem;
-cursor: pointer;
-border: 2px solid transparent;
-transition: all 0.3s ease;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-background: var(--accent);
-color: var(--white);
-}
-
-.btn-primary:hover {
-background: transparent;
-color: var(--accent);
-border-color: var(--accent);
-}
-
-.btn-secondary {
-background: transparent;
-color: var(--white);
-border-color: var(--white);
-}
-
-.btn-secondary:hover {
-background: var(--white);
-color: var(--primary);
-}
-
-.filter-btn {
-  padding: 8px 20px;
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-right: 12px;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--primary);
+  background: var(--black);
   color: var(--white);
 }
 
-.filter-btn:last-child {
-  margin-right: 0;
+.btn-primary:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--black);
+  border-color: var(--black);
+}
+
+.btn-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+.projects-page {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: var(--white);
+  min-height: 100vh;
 }
 
 .projects-header {
   margin-bottom: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
+
+.projects-header h1 {
+  color: var(--black);
+}
+
+
+/* =========================================
+   PROJECT FILTERS
+========================================= */
 
 .project-filters {
   display: flex;
@@ -315,26 +193,59 @@ color: var(--primary);
   gap: 12px;
 }
 
-.projects-page {
-  padding-top: 40px;
-  padding-bottom: 60px;
+.filter-btn {
+  padding: 8px 20px;
+
+  background: transparent;
+  border: 2px solid var(--primary);
+
+  color: var(--primary);
+
+  border-radius: 25px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .projects-header {
-    align-items: center;
-    text-align: center;
-  }
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  color: var(--white);
 }
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+  margin-top: 40px;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
 .about-section {
   padding: 40px 0;
+  background: var(--white);
+  color: var(--text);
 }
 
 .about-wrapper {
   display: grid;
   grid-template-columns: 280px 1fr;
+
   align-items: center;
   gap: 40px;
+
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -347,16 +258,22 @@ color: var(--primary);
 .about-image img {
   width: 100%;
   max-width: 280px;
+
   aspect-ratio: 1 / 1;
   object-fit: cover;
+
   border-radius: 50%;
-  border: 6px solid var(--accent);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  border: 6px solid var(--black);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .about-copy h1 {
   font-size: 2.75rem;
   margin-bottom: 20px;
+  color: var(--black);
 }
 
 .about-copy p {
@@ -364,6 +281,175 @@ color: var(--primary);
   line-height: 1.8;
   color: var(--text);
 }
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+  background: var(--white);
+  color: var(--black);
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-section {
+  background: var(--off-white);
+}
+
+.skill-item {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--border);
+}
+
+.skill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--black);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 12px 30px rgba(181, 47, 47, 0.12);
+}
+
+.skill-name {
+  color: var(--black);
+}
+
+.skill-level {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   GITHUB STATS
+========================================= */
+
+.github-stats {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--border);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+  background: var(--off-white);
+  color: var(--black);
+}
+
+input,
+textarea {
+  background: var(--white);
+  color: var(--black);
+
+  border: 1px solid #cccccc;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(181, 47, 47, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+}
+
+label {
+  color: var(--black);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  background: var(--black);
+  color: var(--white);
+
+  border-top: 3px solid var(--primary);
+}
+
+.site-footer a {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   NAVIGATION SUPPORT
+========================================= */
+
+.nav-links a {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--black);
+}
+
+.logo {
+  color: var(--white);
+}
+
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.theme-toggle {
+  color: var(--black);
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
 
 @media (max-width: 860px) {
   .about-wrapper {
@@ -375,11 +461,44 @@ color: var(--primary);
     margin-bottom: 25px;
   }
 }
-/* Normal text should be black */
-body {
-    color: #111111;
+
+
+@media (max-width: 768px) {
+  .projects-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: min(100% - 24px, 1200px);
+    padding: 0 12px;
+  }
 }
 
-p {
-    color: #111111;
+
+@media (max-width: 480px) {
+  section {
+    padding: 45px 0;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .filter-btn {
+    padding: 7px 16px;
+    font-size: 0.85rem;
+  }
+
+  .about-copy h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-copy p {
+    font-size: 1rem;
+  }
 }

@@ -1,62 +1,38 @@
-export const categories = ['all', 'web', 'fullstack', 'auth'];
+export const categories = ['all', 'web', 'hardware', 'creative'];
 
 export const projectsData = [
   {
     id: 1,
-    title: 'BookMyShow Clone',
-    description: 'Full-stack movie ticket booking platform',
+    title: 'Digital Measuring Tape',
+    description: 'Arduino-based contactless distance measurement system',
     longDesc:
-      'A MERN stack clone of BookMyShow with movie listings, seat selection, booking history, and user authentication.',
-    tech: ['MongoDB', 'Express', 'React', 'Node.js'],
-    category: 'fullstack',
+      'A first-year team project that uses an Arduino Uno, ultrasonic sensor, and LCD display to measure distance without physical contact. The measured distance is calculated using the Time of Flight principle and displayed in real time.',
+    tech: ['Arduino Uno', 'Ultrasonic Sensor', 'LCD', 'Embedded Systems'],
+    category: 'hardware',
     featured: true,
     liveUrl: '#',
     githubUrl: '#'
   },
   {
     id: 2,
-    title: 'React + Spring Boot App',
-    description: 'Full-stack application with REST APIs',
+    title: 'Personal Portfolio Website',
+    description: 'Personal portfolio built with React',
     longDesc:
-      'A responsive web app built with React frontend and Spring Boot backend, featuring RESTful APIs, CRUD operations, and secure authentication.',
-    tech: ['React', 'Spring Boot', 'Java', 'REST API'],
-    category: 'fullstack',
+      'A personal developer portfolio created to showcase my projects, skills, learning journey, and contact information. The website is designed with a responsive interface and a red-and-black visual theme.',
+    tech: ['React', 'JavaScript', 'CSS', 'Vite'],
+    category: 'web',
     featured: true,
-    liveUrl: '#',
+    liveUrl: 'https://kruthika-ten.vercel.app/',
     githubUrl: '#'
   },
   {
     id: 3,
-    title: 'MERN Todo App',
-    description: 'Task manager with JWT auth',
+    title: 'MoodBoard',
+    description: 'A simple creative mood-based web experience',
     longDesc:
-      'A full-featured todo application with user registration, login, and task management using MongoDB, Express, React, and Node.js.',
-    tech: ['MongoDB', 'Express', 'React', 'Node.js'],
-    category: 'auth',
-    featured: false,
-    liveUrl: '#',
-    githubUrl: '#'
-  },
-  {
-    id: 4,
-    title: 'Portfolio Website',
-    description: 'Personal developer portfolio',
-    longDesc:
-      'A multi-page React portfolio showcasing projects, skills, and experience with dark mode support and responsive design.',
-    tech: ['React', 'CSS', 'JavaScript'],
-    category: 'web',
-    featured: true,
-    liveUrl: '#',
-    githubUrl: '#'
-  },
-  {
-    id: 5,
-    title: 'Habit Tracker',
-    description: 'Daily habit tracking app',
-    longDesc:
-      'A MERN-based habit tracker allowing users to create habits, track daily progress, and visualize streaks over time.',
-    tech: ['MongoDB', 'Express', 'React', 'Node.js'],
-    category: 'web',
+      'A small creative learning project where users can select a mood and receive a matching quote and visual experience. This project is planned as part of my journey in learning JavaScript and building interactive web experiences.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    category: 'creative',
     featured: false,
     liveUrl: '#',
     githubUrl: '#'
