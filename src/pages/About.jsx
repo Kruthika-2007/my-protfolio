@@ -1,4 +1,5 @@
 import './AboutPage.css';
+import SkillCard from '../components/SkillCard/SkillCard';
 
 function About() {
   return (
@@ -91,13 +92,79 @@ function About() {
       </section>
 
 
+      {/* ================= SKILLS ================= */}
+
+      <section className="about-block skills-section">
+        <div className="about-container">
+
+          <div className="about-section-heading">
+            <span>02</span>
+            <h2>Skills</h2>
+          </div>
+
+          <div className="skills-grid">
+
+            <SkillCard
+              name="HTML5"
+              level="Intermediate"
+              icon="🌐"
+            />
+
+            <SkillCard
+              name="CSS3"
+              level="Intermediate"
+              icon="🎨"
+            />
+
+            <SkillCard
+              name="JavaScript"
+              level="Intermediate"
+              icon="⚡"
+            />
+
+            <SkillCard
+              name="React"
+              level="Beginner"
+              icon="⚛️"
+            />
+
+            <SkillCard
+              name="Python"
+              level="Intermediate"
+              icon="🐍"
+            />
+
+            <SkillCard
+              name="Java"
+              level="Beginner"
+              icon="☕"
+            />
+
+            <SkillCard
+              name="C Programming"
+              level="Intermediate"
+              icon="💻"
+            />
+
+            <SkillCard
+              name="Arduino"
+              level="Beginner"
+              icon="🔧"
+            />
+
+          </div>
+
+        </div>
+      </section>
+
+
       {/* ================= MY JOURNEY ================= */}
 
       <section className="about-block journey-section">
         <div className="about-container">
 
           <div className="about-section-heading">
-            <span>02</span>
+            <span>03</span>
             <h2>My Journey</h2>
           </div>
 
@@ -106,6 +173,7 @@ function About() {
             <div className="journey-line"></div>
 
             <div className="journey-text">
+
               <h3>Learning by Building</h3>
 
               <p>
@@ -119,6 +187,7 @@ function About() {
                 teach me what I need to improve next. For me, every project
                 is another step forward.
               </p>
+
             </div>
 
           </div>
@@ -133,7 +202,7 @@ function About() {
         <div className="about-container">
 
           <div className="about-section-heading">
-            <span>03</span>
+            <span>04</span>
             <h2>Where It Started</h2>
           </div>
 
@@ -144,6 +213,7 @@ function About() {
             </div>
 
             <div>
+
               <h3>Digital Measuring Tape</h3>
 
               <p>
@@ -157,6 +227,7 @@ function About() {
                 <span>Ultrasonic Sensor</span>
                 <span>LCD</span>
               </div>
+
             </div>
 
           </div>

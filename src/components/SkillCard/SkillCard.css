@@ -1,49 +1,181 @@
-/* src/components/SkillCard/SkillCard.css */
+/* =========================================
+   SKILL CARDS
+   RED + BLACK + WHITE
+========================================= */
 
 .skill-card {
-background: var(--light);
-border: 2px solid var(--primary);
-border-radius: 12px;
-padding: 30px 20px;
-text-align: center;
-transition: transform 0.3s, box-shadow 0.3s;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+
+  padding: 32px 26px;
+
+  text-align: center;
+
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
+
+
+/* =========================================
+   HOVER
+========================================= */
 
 .skill-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+
+  border-color: #b52f2f;
+
+  box-shadow:
+    0 18px 40px rgba(181, 47, 47, 0.12);
 }
+
+
+/* =========================================
+   ICON
+========================================= */
 
 .skill-icon {
-font-size: 2.5rem;
-display: block;
-margin-bottom: 0.5rem;
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111111;
+
+  border-radius: 14px;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    6px 6px 0 #b52f2f;
 }
+
+
+/* =========================================
+   SKILL NAME
+========================================= */
 
 .skill-name {
-margin: 0 0 0.25rem;
-font-size: 1.2rem;
-font-weight: bold;
-color: var(--text);
+  margin: 0 0 6px;
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  color: #111111;
 }
+
+
+/* =========================================
+   SKILL LEVEL
+========================================= */
 
 .skill-level {
-font-size: 0.9rem;
-color: var(--accent);
-margin: 0 0 1rem;
-font-weight: 600;
+  margin: 0 0 18px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  color: #b52f2f;
 }
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
 
 .skill-bar {
-background: #E5E7EB;
-border-radius: 9999px;
-height: 8px;
-width: 100%;
+  width: 100%;
+
+  height: 8px;
+
+  background: #eeeeee;
+
+  border-radius: 999px;
+
+  overflow: hidden;
 }
 
+
+/* =========================================
+   PROGRESS
+========================================= */
+
 .skill-fill {
-background: var(--primary);
-border-radius: 9999px;
-height: 100%;
-transition: width 1s ease-in-out;
+  height: 100%;
+
+  background: #b52f2f;
+
+  border-radius: 999px;
+
+  transition: width 1s ease-in-out;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body[data-theme="dark"] .skill-card {
+  background: #1a1a1a;
+
+  border-color: #333333;
+}
+
+body[data-theme="dark"] .skill-card:hover {
+  border-color: #b52f2f;
+
+  box-shadow:
+    0 18px 40px rgba(181, 47, 47, 0.18);
+}
+
+body[data-theme="dark"] .skill-name {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .skill-level {
+  color: #ff5a5a;
+}
+
+body[data-theme="dark"] .skill-bar {
+  background: #333333;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .skill-card {
+    min-height: 210px;
+
+    padding: 28px 22px;
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 18px;
+  }
+
 }
